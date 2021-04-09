@@ -14,8 +14,6 @@ criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 
 row = 7
 col = 7
-# prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
-# checkerboard of size (7 x 6) is used
 objp = np.zeros((row*col,3), np.float32)
 objp[:,:2] = np.mgrid[0:row,0:col].T.reshape(-1,2)
 
@@ -23,8 +21,7 @@ objp[:,:2] = np.mgrid[0:row,0:col].T.reshape(-1,2)
 objpoints = [] # 3d point in real world space
 imgpoints = [] # 2d points in image plane.
 
-# iterating through all calibration images
-# in the folder
+# iterating through all calibration images in the folder
 images = glob.glob('/home/mikolaj/OpenCV_ws/Getting_started/Calibration_photos/*.jpg')
 
 for fname in images:
