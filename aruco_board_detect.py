@@ -12,8 +12,10 @@ cv2.resizeWindow('Display', 600,600)
 # termination criteria for the iterative algorithm
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 
+####-----------CHANGE IT ACCORDINGLY TO YOUR ARUCO ---------------
 row = 7
 col = 7
+
 objp = np.zeros((row*col,3), np.float32)
 objp[:,:2] = np.mgrid[0:row,0:col].T.reshape(-1,2)
 
